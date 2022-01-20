@@ -1,0 +1,44 @@
+.main-wrapper{
+    margin-top: 30px;
+}
+
+
+.text-input{
+    width: 300px;
+    margin-right: 20px;
+}
+
+.task-lists{
+    background-color: aliceblue;
+}
+
+.list-timer{
+    margin-left: 20px;
+}
+
+.left-panel, .right-panel{
+border: 1px solid #ececec;
+min-height: 500px;
+}
+
+
+.panel-options{
+    padding: 20px;
+}
+.form-fields, .task-lists{
+    border: 2px solid grey;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.list-item{
+    padding: 10px 0px;
+}
+
+ul{
+    list-style: none;
+}
+
+.deleteBtn{
+    margin-left: 20px;
+}

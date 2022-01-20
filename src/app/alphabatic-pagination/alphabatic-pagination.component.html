@@ -1,0 +1,33 @@
+<div class="main-wrapper">
+  <h1>Clockify</h1>
+  <nav class="left-panel col-md-3">
+    <ul class="panel-options">
+      <li class="list-item">Projects</li>
+      <li class="list-item">Tasks</li>
+    </ul>
+  </nav>
+  <aside class="right-panel col-md-9">
+    <div class="form-fields">
+      <form>
+        <input #inputText class="text-input" type="text" placeholder="What are you working on?">
+        <button *ngIf="inputText.value === ''" class="btn btn-primary" (click)="startProject(true, false)">Start</button>
+        <button *ngIf="inputText.value !== ''" class="btn btn-danger" (click)="startProject(false, inputText.value)"> Stop</button>
+      </form>
+    
+      <span>{{timerValue}}</span>
+    </div>
+    
+    
+    <div *ngIf="projectList.length !== 0" class="task-lists">
+      <h2>List of tasks</h2>
+      <ul>
+        <li *ngFor="let project of projectList; let i = index">
+          <span>{{project.projName}}</span> <span class="list-timer">{{project.projTimer}}</span>
+          <button class="btn btn-danger deleteBtn" (click)="deleteProject(i)">Delete</button>
+        </li>
+    
+      </ul>
+    </div>
+  </aside>
+
+</div> 
